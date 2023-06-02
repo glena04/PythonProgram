@@ -33,7 +33,7 @@ def display_calculations():
 
     # Create a label for each calculation and pack them vertically
     for i, calculation in enumerate(calculations):
-        label = tk.Label(calculation_window, text=f"Calculation {i+1}: {calculation} ", font=('Arial', 16))
+        label = tk.Label(calculation_window, text=f"Calculation {i+1}: {calculation} ", font=('Arial', 15))
         label.pack(padx=10, pady=5)
 
 # Create the main window
