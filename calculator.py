@@ -41,7 +41,7 @@ window = tk.Tk()
 window.title("Simple Calculator")
 
 # Create the entry field
-entry = tk.Entry(window, width=20, font=('Arial', 12))
+entry = tk.Entry(window, width=25, font=('Arial', 12))
 entry.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
 # Create number buttons
@@ -54,24 +54,24 @@ for i in range(1, 10):
 operators = ['+', '-', '*', '/']
 for i, operator in enumerate(operators):
     button = tk.Button(window, text=operator, width=5, height=2, font=('Arial', 12),
-                       command=lambda op=operator: button_click(op))
+                       command=lambda op=operator: button_click(op),bg='green')
     button.grid(row=i + 1, column=3)
 
 # Create additional buttons
 button_zero = tk.Button(window, text='0', width=5, height=2, font=('Arial', 12),
-                        command=lambda: button_click(0))
+                        command=lambda: button_click(0),bg='green')
 button_zero.grid(row=4, column=0)
 
 button_clear = tk.Button(window, text='C', width=5, height=2, font=('Arial', 12),
-                         command=button_clear)
+                         command=button_clear,bg='green')
 button_clear.grid(row=4, column=1)
 
 button_equal = tk.Button(window, text='=', width=5, height=2, font=('Arial', 12),
-                         command=button_equal)
+                         command=button_equal,bg='green')
 button_equal.grid(row=4, column=2)
 
 # Create a button to display the calculations
-button_history = tk.Button(window, text='Show History', width=12, height=2, font=('Arial', 12),
+button_history = tk.Button(window, text='Visa alla resultat', width=12, height=2, font=('Arial', 12),
                            command=display_calculations)
 button_history.grid(row=5, column=0, columnspan=3, pady=10)
 
